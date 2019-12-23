@@ -1,0 +1,161 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<script>
+// Output :- Program 1
+document.write("<br/>Program 1<br/>");
+		var i,j,k;
+	for(i=1; i<=3; i++) {
+		for(j=1; j<=3; j++) {
+			document.write("*");
+		}
+		document.write("<br/>");
+	}
+// Output :
+// ***
+// ***
+// ***
+
+// Program 2
+document.write("<br/>Program 2<br/>");
+	for(i=1; i<=5; i++) {
+		for(j=1; j<=i; j++) {
+			document.write(j);
+		}
+		document.write("<br/>");
+	}
+// Output :
+// 1
+// 12
+// 123
+// 1234
+// 12345
+
+// Program 3
+document.write("<br/>Program 3<br/>");
+	for(i=4; i>=1; i--) {
+		for(j=1; j<=i; j++) {
+			document.write(j);
+		}
+		document.write("<br/>");
+	}
+// Output :
+// 1234
+// 123
+// 12
+// 1
+
+// Program 4
+document.write("<br/>Program 4<br/>");
+	for(i=1; i<=5; i++) {
+		for(j=1; j<=i; j++) {
+			document.write(j);
+		}
+		document.write("<br/>");
+	}
+	for(i=4; i>=1; i--) {
+		for(j=1; j<=i; j++) {
+			document.write(j);
+		}
+		document.write("<br/>");
+	}
+// Output :
+// 1
+// 12
+// 123
+// 1234
+// 12345
+// 1234
+// 123
+// 12
+// 1
+
+// Program 5
+document.write("<br/>Program 5<br/>");
+	for(i=1; i<=5; i++) {
+		for(j=1; j<=i; j++) {
+			document.write('*');
+		}
+		document.write("<br/>");
+	}
+// Output :
+// *
+// **
+// ***
+// ****
+// *****
+
+// Program 6
+document.write("<br/>Program 6<br/>");
+	var val = 5,k;
+	for (i = 1; i <= val; i++) {
+		for (j = 1; j <= val - i; j++) {
+			document.write('&nbsp');
+		}
+		for (k = 1; k <= i; k++) {
+			document.write(k);
+		}
+		document.write('<br/>');
+	}
+// Output :
+//     1
+//    12
+//   123
+//  1234
+// 12345
+
+// Program 7
+document.write("<br/>Program 7<br/>");
+	var val = 5,k;
+	for (i = 1; i <= val; i++) {
+		for (j = 1; j <= val - i; j++) {
+			document.write('&nbsp');
+		}
+		for (k = 1; k <= i; k++) {
+			document.write("*");
+		}
+		document.write('<br/>');
+	}
+// Output :
+//     *
+//    **
+//   ***
+//  ****
+// *****
+
+
+// Program 10
+document.write("<br/>Program 10<br/>");
+	for (var i = 1; i < 5; i++) {
+		for (var j = 65; j < 65+i; j++) {
+			document.write(String.fromCharCode(j));
+
+		}
+		document.write("<br>");
+	}
+// Output :
+// A
+// AB
+// ABC
+// ABCD
+
+// Program 11
+document.write("<br/>Program 11<br/>");
+	for (var i = 1; i < 5; i++) {
+		for (var j = 65; j < 65+i; j++) {
+			document.write(String.fromCharCode(j)) + document.write(j-64);
+
+		}
+		document.write("<br>");
+	}
+// Output :
+// A1
+// A1B2
+// A1B2C3
+// A1B2C3D4
+</script>
+</body>
+</html>
