@@ -1,0 +1,32 @@
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1>Email Separation</h1>
+<input type="email" id="email" name="email" />
+<input type="button" onclick="sepemail()" value="Submit"/>
+<p>Name : <span id="names"></span></p>
+<p>Domain : <span id="domains"></span></p>
+<script>
+
+//separate email with two parts name and domain
+function sepemail(){
+	var getemail = document.getElementById("email").value;
+	var name = getemail.substring(0, getemail.indexOf("@"));
+	var domain = getemail.substring(getemail.indexOf("@") + 1);
+	document.getElementById("names").innerHTML = name;
+	document.getElementById("domains").innerHTML = domain;
+}
+/*
+Input - test@test.com
+Output -
+Name : test
+Domain : test.com*/
+
+</script>
+</body>
+</html>

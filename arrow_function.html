@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+<body>
+<script>
+// function program converted into arrow function
+	// 1st - multiply two value with function
+	var multiplyES5 = function(x, y) {
+		return x * y;
+	};
+	console.log(multiplyES5(2,4));
+	// 1st - multiply two value with arrow function
+	const multiplyES6 = (x, y) => x * y;
+	console.log(multiplyES6(2,4));
+	
+	
+	// 2nd - check in array which value is grater than 10 with every method and arrow function
+	isBigEnough = (value) => value >= 10;
+	var filt = [12, 5, 8, 130, 44];
+	console.log(filt.filter(isBigEnough));
+	// output - [12, 130, 44]
+	
+  
+</script>
+</body>
+</html>

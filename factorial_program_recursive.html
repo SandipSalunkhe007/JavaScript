@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<input type="text" placeholder="Enter a no." id="nos" />
+<input type="button" value="Submit" onclick="show()"/>
+<p>Answer :- <span id="answer"> </span></p>
+<script>
+//factorial _recursive function
+
+	//factorial Program_recursive function
+	function fact(number){
+		start = 0;
+		if(number <= 1){
+		return 1;
+		}
+		while(start <= number){
+			return number * fact(number - 1); //function calling itself
+		}
+	}
+	var r = fact(5);
+	console.log(r);
+
+	// get input from input field then onclick show factorial output
+	function show(){
+	var i, no, facts;
+	facts=1;
+	no = Number(document.getElementById("nos").value);
+	for(i=1; i<=no; i++)  
+	{
+		facts= facts*i;
+	}  
+	document.getElementById("answer").textContent = facts;
+	}
+</script>
+</body>
+</html>

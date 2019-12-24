@@ -1,0 +1,47 @@
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+// check whether value or string will duplicate then remove, after sorting. Both method can apply on value and string
+
+	// 1st method using callback function
+	var array = [1,2,3,1,3,5,7,6]; 
+	function removeDuplicateUsingFilter(arr){
+	let unique_array = arr.filter(function(elem, index, self) {
+		return index == self.indexOf(elem);
+	});
+	return unique_array;
+	}
+	console.log(removeDuplicateUsingFilter(array).sort());
+	// Output - [1, 2, 3, 5, 6, 7]
+
+	// 2nd method using loop
+	console.log("Remove duplicate with sort using loop and sort method");
+	var array1 = [1,2,3,1,3,5,7,6]; 
+	var outputArray = [];
+	var count = 0;
+	var start = false;
+	for (j = 0; j < array1.length; j++) { 
+		for (k = 0; k < outputArray.length; k++) { 
+			if ( array1[j] == outputArray[k] ) { 
+				start = true; 
+			}
+		}
+		count++;
+		if (count == 1 && start == false) { 
+			outputArray.push(array1[j]); 
+		}
+		start = false;
+		count = 0;
+	}
+	console.log(outputArray.sort()); 
+	// Output - [1, 2, 3, 5, 6, 7]
+	
+</script>
+</body>
+</html>
