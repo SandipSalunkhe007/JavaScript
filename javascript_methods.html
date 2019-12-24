@@ -1,0 +1,259 @@
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+</head>
+<body>
+<header>Type</header>
+
+<input type="text" id="name" name="name" placeholder="name" />
+<input type="text" id="nos" name="nos" />
+<input type="submit" value="Submit" onClick="subbtn()"/>
+<div id="root">tnkbkbn</div>
+<script>
+
+/*var el = document.getElementById('root'); 
+        var arr = [2, 5, 6, 3, 8, 9]; 
+          
+        var newArr = arr.map(function(val, index){ 
+            return {key:index, value:val*val}; 
+        })
+        
+        console.log(newArr)
+          
+       el.innerHTML = JSON.stringify(newArr); 
+	var uniqueArray = "st";
+	function getUnique(array){
+        uniqueArray = "stfsd";
+        // Loop through array values
+        for(i=0; i < array.length; i++){
+            if(uniqueArray.indexOf(array[i]) === -1) {
+                uniqueArray.push(array[i]);
+            }
+        }
+        return uniqueArray;
+    }
+	console.log(uniqueArray);
+    var names = [1,2,1,3,4,2,4,5,"Sam"];
+    var uniqueNames = getUnique(names);
+    console.log(uniqueNames); // Prints: ["John", "Peter", "Clark", "Harry", "Alice"]
+	var pl = parseInt(document.getElementById("name").text);
+	console.log(names.indexOf(pl));*/
+	//console.log(pl);
+	
+    //Difference between split, splice, and slice
+    
+	// split method
+	var splitvar = "Welcome to new world";
+	var result = splitvar.split(' ');
+	console.log(result);
+	//Output - ["Welcome", "to", "new", "world"]
+	//we can split only string we can 
+	
+	// splice method
+	var splicevar = ["10","20","30","40","abc"];
+    splicevar.splice(4,0,50);
+	console.log(splicevar);
+	//Output -  ["10", "20", "30", "40", 50, "abc"]
+	//syntax splice(index, delete_count, add-value)
+	
+	// slice method
+	var slicevar = splicevar.slice(2,5);
+	console.log(slicevar);
+	//Output - ["30", "40", 50]
+	//syntax slice(start_index, end_index) copy result in new array
+	
+	// map method
+    var i = [1,2,3];
+    var result = i.map(val=>{return val * 2});
+    console.log(result);
+	//Output - [2, 4, 6]
+	
+    //map method
+	var result1 = i.map(myFunction);
+    function myFunction(val){
+        return val * 2;
+    }
+	console.log(result1);
+	//Output - [2, 4, 6]
+	
+	//map method
+    var result2 = i.map(function(val){
+        return val * 2;
+    });
+    console.log(result2);
+	//Output - [2, 4, 6]
+
+	
+	//map and call method
+	// New array of character and names
+	// concatenated with 'A'  
+	var name = "Test";
+	var newName = Array.prototype.map.call(name, function(item) {
+		return item + 'A';
+	})
+	console.log(newName);
+	//Output - ["TA", "eA", "sA", "tA"]
+		
+	//concat method
+	var array1 = [1, 4, 9, 16];
+	var array2 = [1, 4, 9, 16];
+	console.log(array1.concat(array2));
+	//Output - [1, 4, 9, 16, 1, 4, 9, 16]
+	
+	//every method
+	const isBelowThreshold = (currentValue) => currentValue > 10;
+	const array3 = [11, 30, 39, 29, 10, 13];
+	console.log(array3.every(isBelowThreshold));
+	//Output - false
+	// in every method check all values in array. In that array not all value is greater than 10
+	
+	
+    
+	// filter method
+	// Find values which is grater than 10 in array
+	isBigEnough = (value) => value >= 10;
+	var filt = [12, 5, 8, 130, 44];
+	var filtered = filt.filter(isBigEnough);
+	console.log(filtered);
+	// Output - [12, 130, 44]
+	
+	// filter method
+	// Find 1 value any where in array then print
+	// Find 'an' word in array
+	var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange', 'apple', '1', '123', '233', '1111'];
+	function filterItems(arr, query) {
+		return arr.filter(function(el) {
+		  return el.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+		})
+	}
+	console.log(filterItems(fruits, '1')); // ["1", "123", "1111"]
+	console.log(filterItems(fruits, 'an')); // ["banana", "mango", "orange"]
+
+
+
+function subbtn(){
+var getinputs = document.getElementById("nos").value;
+	testarray = [];
+	testarray.push(getinputs);
+	console.log(testarray);
+}
+var foo = {
+	bar : function(){
+		return this.baz;
+	}
+};
+(function()
+{
+	return typeof arguments[0]();
+})
+console.log(foo.bar());
+console.log("101100110101010".split(0,4));
+function printfunt(a,b,callback,callbacksec){
+	document.write("<br/>");
+	document.write(a+b);
+	callback();
+	callbacksec();
+}
+function callbck() {
+	document.write("Addition of a and b");
+}
+function callbcksec(){
+	document.write("Callback second");
+}
+var res = printfunt(2,5,callbck,callbcksec);
+console.log(res);
+
+const gods = ['Apollo', 'Artemis', 'Ares', 'Zeus'];
+//value, index, array
+gods.forEach(function (eachName, indexs){
+  console.log(indexs + '. ' + eachName);
+});
+
+ //basic of call
+ /*  var person = {
+        firstName :"Sandip",
+        lastName :"Salunkhe",
+    }
+    var fullName  = function(){
+        return this.firstName + " "+ this.lastName;
+    }
+    var person2 = {
+        firstName :"Nadeem",
+        lastName :"Sayyad"
+    }
+    console.log(fullName.call(person,"Maharashtra","Jalgaon"));
+    console.log(fullName.call(person2));*/
+    //apply
+  /*  var person = {
+        firstName :"Sandip",
+        lastName :"Salunkhe",
+    }
+    var fullName  = function(state){
+        return this.firstName + " "+ this.lastName + " "+ (state == "undefined" ? '': state);
+    }
+    var person2 = {
+        firstName :"Nadeem",
+        lastName :"Sayyad"
+    }
+    console.log(fullName.apply(person,"Maharashtra","Pune"));
+    console.log(fullName.apply(person2));*/
+
+    // var person = {
+    //     firstName :"Sandip",
+    //     lastName :"Salunkhe",
+    // }
+    // var fullName  = function(){
+    //     return this.firstName + " "+ this.lastName;
+    // }
+    // var person2 = {
+    //     firstName :"Nadeem",
+    //     lastName :"Sayyad"
+    // }
+    // var result = fullName.bind(person);
+    // var result2 = fullName.bind(person2);
+    // console.log(result2());
+    // console.log(result());
+	
+var zaphod = {name: 'Zaphod', age: 42};
+var marvin = {name: 'Marvin', age: 420000000000};
+
+zaphod.sayHello = function(){
+  return "Hi, I'm " + this.name;
+}
+marvin.sayHello = zaphod.sayHello;
+
+console.log(zaphod.sayHello());
+
+var plus = function(x,y){ return x + y };
+var minus = function(x,y){ return x - y };
+
+var operations = {
+  '+': plus,
+  '-': minus
+};
+var calculate = function(x, y, operation){
+    return operations[operation](x, y);
+}
+calculate(38, 4, '+');
+calculate(47, 3, '-');
+console.log(calculate(47, 3, '+'));
+
+var Problem = function(x, y){
+  this.x = x;
+  this.y = y;        
+}
+var problem1 = new Problem(4,5);
+console.log(problem1);
+var assign = ["test1", {id : "tester"}, "test2", "test3"];
+document.write(assign);
+
+$("#root").css("background","#333");
+</script>
+</body>
+</html>
